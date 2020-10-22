@@ -1,18 +1,18 @@
 Feature: Solicitor API
 
-  Scenario: GET /solicitor/{id} to retrieve a solicitor
+  Scenario: GET /solicitor/{ref} to retrieve a solicitor
     Given Solicitor 1234 is present
     And I am authenticated
     When I request solicitor 1234 information
     Then I get everything I need
 
-  Scenario: POST /solicitor/{id} to record a solicitor
+  Scenario: POST /solicitor to record a solicitor
     Given I am authenticated
     When I submit the new solicitor 1234
     And I request solicitor 1234 information
     Then I get everything I need
 
-  Scenario: PUT /solicitor/{id} to update a solicitor
+  Scenario: PUT /solicitor/{ref} to update a solicitor
     Given Solicitor 1234 is present
     And I am authenticated
     When I submit to update solicitor 1234
